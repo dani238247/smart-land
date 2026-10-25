@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Land - IT Solutions & Consulting</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div id="scrollProgress"></div>
+
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="assets/images/logo.webp" alt="Smart Land Logo">
+        <span>Smart Land</span>
+      </div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#demos">Demos</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#ethics">Governance</a>
+        <a href="#contact" class="btn-contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <video autoplay muted loop playsinline preload="auto" id="bgVideo">
+      <source src="assets/videos/intro-video.mp4" type="video/mp4">
+      <track src="assets/videos/subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
+    </video>
+
+    <div class="hero-overlay"></div>
+    <canvas id="neuralCanvas"></canvas>
+    
+    <div class="container hero-content">
+      <span class="badge">ESTABLISHED 2011</span>
+      <h1>Smart Land Powers <span id="typewriter"></span></h1>
+      <p>Innovative IT solutions and smart software engineering for modern enterprise challenges.</p>
+      
+      <div class="hero-btns">
+        <a href="#projects" class="btn-main">View Projects</a>
+        <button id="toggleAudioBtn" class="btn-alt">
+          <span id="audioIcon">🔊</span> Sound On
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker-wrap">
+    <div class="ticker-move">
+      <span>AI-DRIVEN ARCHITECTURE</span>
+      <span>•</span>
+      <span>ENTERPRISE SYSTEMS</span>
+      <span>•</span>
+      <span>COMPUTER VISION</span>
+      <span>•</span>
+      <span>ESTABLISHED 2011</span>
+      <span>•</span>
+      <span>SCALABLE PLATFORMS</span>
+      <span>•</span>
+      <span>AI-DRIVEN ARCHITECTURE</span>
+      <span>•</span>
+      <span>ENTERPRISE SYSTEMS</span>
+      <span>•</span>
+      <span>COMPUTER VISION</span>
+      <span>•</span>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Smart Land</h2>
+      <p>
+        Founded in 2011, Smart Land provides enterprise technology consulting and software engineering. We develop customized digital platforms and integrate practical AI solutions to enhance performance across multiple industries.
+      </p>
+    </div>
+  </section>
+
+  <section id="stats" class="stats">
+    <div class="container stats-flex">
+      <div class="stat-item">
+        <h3 class="counter" data-target="2011">0</h3>
+        <p>Year Founded</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="50">0</h3>
+        <p>Projects Delivered</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="counter" data-target="100">0</h3>
+        <p>% Success Rate</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Our Projects</h2>
+      
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI Solutions</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card" data-category="ai">
+          <picture>
+            <source srcset="assets/images/smart-signal.webp" type="image/webp">
+            <img src="assets/images/smart-signal.webp" alt="Smart Signal" loading="lazy">
+          </picture>
+          <div class="card-text">
+            <span class="tag">Artificial Intelligence</span>
+            <h3>Smart Signal</h3>
+            <p>Computer vision mobile app that translates sign language into real-time text and synthesized speech.</p>
+            <div class="pills">
+              <span>Computer Vision</span>
+              <span>PyTorch</span>
+              <span>TTS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="enterprise">
+          <picture>
+            <source srcset="assets/images/mykey.webp" type="image/webp">
+            <img src="assets/images/mykey.webp" alt="MyKey" loading="lazy">
+          </picture>
+          <div class="card-text">
+            <span class="tag">Marketplace</span>
+            <h3>MyKey Platform</h3>
+            <p>Digital marketplace connecting users for real estate and automotive deals with verified listings.</p>
+            <div class="pills">
+              <span>Microservices</span>
+              <span>PostgreSQL</span>
+              <span>Security</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="mobile">
+          <picture>
+            <source srcset="assets/images/sada.webp" type="image/webp">
+            <img src="assets/images/sada.webp" alt="Sada" loading="lazy">
+          </picture>
+          <div class="card-text">
+            <span class="tag">EdTech</span>
+            <h3>Sada E-Learning</h3>
+            <p>Virtual learning platform with interactive virtual classrooms and student performance analytics.</p>
+            <div class="pills">
+              <span>WebRTC</span>
+              <span>Streaming</span>
+              <span>Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="mobile">
+          <picture>
+            <source srcset="assets/images/welcome.webp" type="image/webp">
+            <img src="assets/images/welcome.webp" alt="Welcome App" loading="lazy">
+          </picture>
+          <div class="card-text">
+            <span class="tag">E-Commerce</span>
+            <h3>Welcome App</h3>
+            <p>Multi-vendor shopping application supporting integrated digital payments and delivery tracking.</p>
+            <div class="pills">
+              <span>REST API</span>
+              <span>Payments</span>
+              <span>Tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-category="enterprise">
+          <picture>
+            <source srcset="assets/images/hospital-system.webp" type="image/webp">
+            <img src="assets/images/hospital-system.webp" alt="Hospital System" loading="lazy">
+          </picture>
+          <div class="card-text">
+            <span class="tag">Healthcare IT</span>
+            <h3>Hospital Management System</h3>
+            <p>Hospital management software for handling patient records, clinic appointments, and administrative tasks.</p>
+            <div class="pills">
+              <span>FHIR Standard</span>
+              <span>Patient Records</span>
+              <span>Triage</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="demos" class="demos-section">
+    <div class="container">
+      <h2>System Demos</h2>
+      <p class="subtitle">Video demonstrations of our mobile vision and enterprise healthcare software</p>
+
+      <div class="demos-grid">
+        <div class="demo-box">
+          <video controls preload="metadata" poster="assets/images/smart-signal.webp">
+            <source src="assets/videos/mobile-app-video.mp4" type="video/mp4">
+          </video>
+          <div class="demo-info">
+            <span class="tag">Mobile Vision Demo</span>
+            <h3>Smart Signal Walkthrough</h3>
+            <p>Real-time demo showing sign language detection using mobile camera stream.</p>
+          </div>
+        </div>
+
+        <div class="demo-box">
+          <video controls preload="metadata" poster="assets/images/hospital-system.webp">
+            <source src="assets/videos/hospital-video.mp4" type="video/mp4">
+          </video>
+          <div class="demo-info">
+            <span class="tag">Healthcare Demo</span>
+            <h3>Hospital System Walkthrough</h3>
+            <p>Overview of the user interface, patient record management, and doctor schedules.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="workflow" class="workflow">
+    <div class="container">
+      <h2>Project Workflow</h2>
+      <p class="subtitle">Our standard development pipeline from discovery to deployment</p>
+      
+      <div class="steps-grid">
+        <div class="step-box">
+          <span class="num">01</span>
+          <h3>Analysis</h3>
+          <p>Understanding system requirements, user needs, and feasibility.</p>
+        </div>
+        <div class="step-box">
+          <span class="num">02</span>
+          <h3>Design</h3>
+          <p>Creating UI layouts, system architecture, and database models.</p>
+        </div>
+        <div class="step-box">
+          <span class="num">03</span>
+          <h3>Development</h3>
+          <p>Frontend integration, backend services, and API connections.</p>
+        </div>
+        <div class="step-box">
+          <span class="num">04</span>
+          <h3>Testing & Review</h3>
+          <p>Testing edge cases, security validation, and deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ethics" class="ethics">
+    <div class="container">
+      <h2>AI Ethics & Considerations</h2>
+      <p class="subtitle">Balancing innovation with security, privacy, and user trust</p>
+
+      <div class="ethics-cols">
+        <div class="col-box pros">
+          <h3>Key Advantages</h3>
+          <ul>
+            <li>Improves automation and reduces operational workload.</li>
+            <li>Enables real-time data analysis and smarter decision support.</li>
+            <li>Enhances digital accessibility for users with special needs.</li>
+          </ul>
+        </div>
+
+        <div class="col-box cons">
+          <h3>Challenges & Governance</h3>
+          <ul>
+            <li>Preventing bias in dataset inputs and machine learning training.</li>
+            <li>Adhering to strict user data privacy and copyright laws.</li>
+            <li>Requiring human oversight before executing critical system actions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tech-note">
+        <strong>Media Note:</strong> This project applies WebP compression for graphics, WebVTT subtitle tracks, and HTML5 video streaming to optimize browser performance.
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form class="contact-form" onsubmit="event.preventDefault();">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2011 - 2026 Smart Land Technologies | Multimedia Project</p>
+      <div class="status">
+        <span class="dot"></span>
+        <span>Systems Online</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
